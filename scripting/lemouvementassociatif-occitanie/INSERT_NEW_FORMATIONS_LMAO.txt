@@ -1,0 +1,45 @@
+INSERT INTO formation (titre, date_debut, date_fin, prix, categorie_id, fournisseur_id, lien) VALUES
+('Formation : Au secours, personne ne veut être président.e !', '2025-04-22', NULL, 0, 8, 12, 'https://formations-benevoles.org/occitanie/formations/formation-au-secours-personne-ne-veut-etre-president-e/'),
+('Atelier formatif “Apprendre à utiliser Canva”                
+Perpignan', '2025-04-24', NULL, 0, 8, 12, 'https://formations-benevoles.org/occitanie/formations/atelier-formatif-apprendre-a-utiliser-canva/'),
+('Mettre en place la comptabilité d’une petite association                
+NIMES', '2025-04-29', NULL, 0, 8, 12, 'https://formations-benevoles.org/occitanie/formations/934-517/'),
+('L’intelligence artificielle ? Comment l’utiliser au sein de votre association !', '2025-04-29', NULL, 0, 8, 12, 'https://formations-benevoles.org/occitanie/formations/lintelligence-artificielle-comment-lutiliser-au-sein-de-votre-association/'),
+('L’accueil et l’implication des pères dans les structures de soutien de la parentalité – Niveau 1', '2025-05-09', NULL, 0, 8, 12, 'https://formations-benevoles.org/occitanie/formations/laccueil-et-limplication-des-peres-dans-les-structures-de-soutien-de-la-parentalite-735/'),
+('CONSTRUIRE SON MODÈLE SOCIO-ÉCONOMIQUE POUR SUIVRE LA MISE EN ŒUVRE DE SON PROJET', '2025-05-13', NULL, 0, 8, 12, 'https://formations-benevoles.org/occitanie/formations/anticiper-et-suivre-la-mise-en-oeuvre-de-son-projet/'),
+('Savoir utiliser Basicompta pour la gestion comptable de son association', '2025-05-14', NULL, 0, 8, 12, 'https://formations-benevoles.org/occitanie/formations/savoir-utiliser-basicompta/'),
+('L’accueil et l’implication des pères dans les structures de soutien de la parentalité- Niveau 2', '2025-05-15', NULL, 0, 8, 12, 'https://formations-benevoles.org/occitanie/formations/laccueil-et-limplication-des-peres-dans-les-structures-de-soutien-de-la-parentalite-735-700-598/'),
+('Formation : Mettre en place une comptabilité adaptée à son association', '2025-05-19', NULL, 0, 8, 12, 'https://formations-benevoles.org/occitanie/formations/formation-mettre-en-place-une-comptabilite-adaptee-a-son-association/'),
+('Intervenant Savoir Rouler à vélo                
+Montpellier', '2025-05-19', NULL, 0, 8, 12, 'https://formations-benevoles.org/occitanie/formations/intervenant-savoir-rouler-a-velo/'),
+('Les Bénévoles', '2025-05-22', NULL, 0, 8, 12, 'https://formations-benevoles.org/occitanie/formations/les-benevoles/'),
+('Formation : À la recherche du bénévole perdu : outils et bonnes pratiques pour trouver et garder ses bénévoles', '2025-05-28', NULL, 0, 8, 12, 'https://formations-benevoles.org/occitanie/formations/formation-a-la-recherche-du-benevole-perdu-outils-et-bonnes-pratiques-pour-trouver-et-garder-ses-benevoles/'),
+('Savoir utiliser Canvas pour sa communication associative', '2025-06-04', NULL, 0, 8, 12, 'https://formations-benevoles.org/occitanie/formations/savoir-utiliser-canvas/'),
+('“PITCHER SON PROJET ASSOCIATIF” : LE PRÉSENTER CLAIREMENT', '2025-06-10', NULL, 0, 8, 12, 'https://formations-benevoles.org/occitanie/formations/pitcher-son-projet-associatif-le-presenter-clairement/'),
+('Formation : Gestion : Le budget prévisionnel et le plan de trésorerie dans son association', '2025-06-12', NULL, 0, 8, 12, 'https://formations-benevoles.org/occitanie/formations/formation-gestion-le-budget-previsionnel-et-le-plan-de-tresorerie-dans-son-association/'),
+('Tous comptes faits, c’est simple !', '2025-06-12', NULL, 0, 8, 12, 'https://formations-benevoles.org/occitanie/formations/tous-comptes-faits-cest-simple/'),
+('Echanges de pratiques sur l’allez vers, à la rencontre des habitants', '2025-06-13', NULL, 0, 8, 12, 'https://formations-benevoles.org/occitanie/formations/echanges-de-pratiques-sur-lallez-vers/'),
+('Formation : On a besoin d’argent ! Panorama des financements', '2025-06-17', NULL, 0, 8, 12, 'https://formations-benevoles.org/occitanie/formations/formation-on-a-besoin-dargent-panorama-des-financements/'),
+('RÉDIGER SON RAPPORT D’ACTIVITÉ', '2025-06-24', NULL, 0, 8, 12, 'https://formations-benevoles.org/occitanie/formations/rediger-son-rapport-dactivite/'),
+('Formation : Passer au logiciel libre Paheko pour la tenue de sa comptabilité', '2025-06-24', NULL, 0, 8, 12, 'https://formations-benevoles.org/occitanie/formations/formation-passer-au-logiciel-libre-paheko-pour-la-tenue-de-sa-comptabilite/'),
+('L’accueil et l’implication des pères dans les structures de soutien de la parentalité- Niveau 1', '2025-06-25', NULL, 0, 8, 12, 'https://formations-benevoles.org/occitanie/formations/laccueil-et-limplication-des-peres-dans-les-structures-de-soutien-de-la-parentalite-735-700/'),
+('L’accueil et l’implication des pères dans les structures de soutien de la parentalité- Niveau 2', '2025-06-27', NULL, 0, 8, 12, 'https://formations-benevoles.org/occitanie/formations/laccueil-et-limplication-des-peres-dans-les-structures-de-soutien-de-la-parentalite-735-700-598-344/'),
+('Faire le tri dans nos activités', '2025-07-03', NULL, 0, 8, 12, 'https://formations-benevoles.org/occitanie/formations/faire-le-tri-dans-nos-activites/'),
+('Mettre en place la comptabilité d’une petite association                
+NIMES', '2025-09-15', NULL, 0, 8, 12, 'https://formations-benevoles.org/occitanie/formations/934-517-346/'),
+('CFGA- Certificat de Formation à la Gestion Associative', '2025-09-16', NULL, 0, 8, 12, 'https://formations-benevoles.org/occitanie/formations/cfga-certificat-de-formation-a-la-gestion-associative/'),
+('Être dirigeant ou administrateur d’une association                
+NIMES', '2025-09-23', NULL, 0, 8, 12, 'https://formations-benevoles.org/occitanie/formations/934-517-420/'),
+('Panorama des financements associatifs                
+NIMES', '2025-10-07', NULL, 0, 8, 12, 'https://formations-benevoles.org/occitanie/formations/panorama-des-financements-associatifs-565/'),
+('Relation administrateurs-salariés, pour une équipe de choc !', '2025-10-09', NULL, 0, 8, 12, 'https://formations-benevoles.org/occitanie/formations/relation-administrateurs-salaries/'),
+('Les Financements', '2025-10-09', NULL, 0, 8, 12, 'https://formations-benevoles.org/occitanie/formations/les-financements/'),
+('Clarifier son projet 2025 pour déposer un dossier de subvention                
+NIMES', '2025-10-16', NULL, 0, 8, 12, 'https://formations-benevoles.org/occitanie/formations/934/'),
+('Le CFGA dans le Gard – Session d’automne                
+NIMES', '2025-11-06', NULL, 0, 8, 12, 'https://formations-benevoles.org/occitanie/formations/934-517-420-887-960/'),
+('Contrat de ville de Toulouse Métropole', '2025-11-06', NULL, 0, 8, 12, 'https://formations-benevoles.org/occitanie/formations/contrat-de-ville-de-toulouse-metropole/'),
+('Mettre en place la comptabilité d’une petite association                
+NIMES', '2025-11-20', NULL, 0, 8, 12, 'https://formations-benevoles.org/occitanie/formations/934-517-346-879/'),
+('J’peux pas, j’ai subvention', '2025-12-04', NULL, 0, 8, 12, 'https://formations-benevoles.org/occitanie/formations/jpeux-pas-jai-subvention/'),
+('Bénévoles d’activités, dirigeants bénévoles : les mobiliser, les accompagner.', '2025-12-05', NULL, 0, 8, 12, 'https://formations-benevoles.org/occitanie/formations/benevoles-dactivites-dirigeants-benevoles-les-mobiliser-les-accompagner/');
