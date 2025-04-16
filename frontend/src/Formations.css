@@ -1,0 +1,108 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Press Start 2P', cursive; /* Appliquer la police Press Start 2P globalement */
+  background-color: #f0f9ff; /* Bleu très clair pour le fond */
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header prenant toute la largeur de l'écran */
+.header {
+  width: 100%; /* Prend toute la largeur de l'écran */
+  display: flex;
+  justify-content: center;  /* Centrer le texte horizontalement */
+  align-items: center;
+  padding: 50px 0;  /* Espacement autour du texte */
+  background-color: #ADD8E6;  /* Bleu clair pour le fond du header */
+  border-radius: 0 0 20px 20px;  /* Arrondir uniquement les coins du bas */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Légère ombre portée pour plus de contraste */
+}
+
+.header h1 {
+  font-size: 3rem;  /* Taille du texte */
+  color: #1e90ff;  /* Bleu moyen pour le texte */
+  margin: 0;
+  text-align: center;
+  font-weight: bold;  /* Ajoute un peu de poids au texte pour le mettre en valeur */
+}
+
+/* Barre de recherche et filtres */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.search-bar {
+  padding: 10px;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 400px;
+  border: 2px solid #1e90ff;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.search-bar:focus {
+  border-color: #ff6347;  /* Changer la couleur du bord au focus */
+}
+
+.filter-select {
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #1e90ff;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.filter-select:focus {
+  border-color: #ff6347;  /* Changer la couleur du bord au focus */
+}
+
+/* Liste des formations */
+.formation-list {
+  list-style-type: none;
+  margin-top: 20px;
+}
+
+.formation-item {
+  background-color: #f0f9ff;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.formation-item:hover {
+  background-color: #e0f7fa;
+  transform: scale(1.05);
+}
+
+.formation-link {
+  color: #1e90ff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.formation-link:hover {
+  text-decoration: underline;
+}
