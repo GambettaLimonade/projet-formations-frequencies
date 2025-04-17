@@ -1,0 +1,17 @@
+/* Footer.css */
+.footer {
+    background-color: rgb(171, 189, 234); /* Couleur de fond */
+    padding: 20px;
+    text-align: center;
+    color: #333; /* Couleur du texte */
+    position: relative; /* Position relative pour le footer */
+  }
+  
+  .footer-content p {
+    margin: 10px 0;
+  }
+  
+  .footer-logo {
+    margin: 20px 0;
+    font-weight: bold;
+  }

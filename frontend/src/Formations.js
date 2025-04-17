@@ -70,12 +70,14 @@ const Formations = () => {
           <option value="5">Sciences</option>
           <option value="6">Business</option>
           <option value="7">Langues</option>
+          <option value="8">Associatif</option>
         </select>
 
         {/* Sélecteur de fournisseur */}
         <select onChange={handleFournisseurChange} value={fournisseur} className="filter-select">
           <option value="">Sélectionner un fournisseur</option>
           <option value="11">Coursera</option> {/* Seulement Coursera pour le moment */}
+          <option value="12">Le mouvement associatif</option> {/* Seulement Coursera pour le moment */}
         </select>
       </div>
 

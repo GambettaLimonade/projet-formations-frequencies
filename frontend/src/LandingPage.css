@@ -1,0 +1,41 @@
+/* LandingPage.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+  }
+  
+  .landing-page {
+    text-align: center;
+    color: black;
+    background-color: #000;
+    min-height: 100vh; /* Assurez-vous que la page occupe au moins la hauteur de la fenêtre */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative; /* Position relative pour contenir les vagues absolues */
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    position: relative; /* Assurez-vous que le header est positionné relativement */
+    z-index: 10; /* Assurez-vous que le header est au-dessus des vagues */
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: black; /* Assurez-vous que le texte est visible */
+  }
+  
+  .nav a {
+    color: black; /* Assurez-vous que le texte est visible */
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+  }

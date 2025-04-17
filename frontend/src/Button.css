@@ -1,0 +1,25 @@
+/* Button.css */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; /* Assure que le conteneur prend toute la hauteur de la page */
+    z-index: 1;
+  }
+  
+  .find-your-way-button {
+    background-color: #333; /* Couleur de fond initiale */
+    color: white; /* Couleur du texte blanche */
+    border: none; /* Pas de bordure initiale */
+    border-radius: 30px; /* Coins arrondis */
+    padding: 20px 40px; /* Augmenter l'espacement interne pour un bouton plus grand */
+    font-size: 24px; /* Augmenter la taille de la police */
+    cursor: pointer; /* Curseur pointeur */
+    transition: background-color 0.3s ease, border 0.3s ease; /* Transition douce pour le changement de couleur et de bordure */
+  }
+  
+  .find-your-way-button:hover {
+    background-color: transparent; /* Fond transparent au survol */
+    color: #333; /* Couleur du texte changée au survol */
+    border: 3px solid #333; /* Bordure visible au survol, légèrement plus épaisse */
+  }
