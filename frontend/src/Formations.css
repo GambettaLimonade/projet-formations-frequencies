@@ -12,33 +12,9 @@ body {
 }
 
 .container {
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 20px;
   background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Header prenant toute la largeur de l'écran */
-.header {
-  width: 100%; /* Prend toute la largeur de l'écran */
-  display: flex;
-  justify-content: center;  /* Centrer le texte horizontalement */
-  align-items: center;
-  padding: 50px 0;  /* Espacement autour du texte */
-  background-color: #ADD8E6;  /* Bleu clair pour le fond du header */
-  border-radius: 0 0 20px 20px;  /* Arrondir uniquement les coins du bas */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Légère ombre portée pour plus de contraste */
-}
-
-.header h1 {
-  font-size: 3rem;  /* Taille du texte */
-  color: #1e90ff;  /* Bleu moyen pour le texte */
-  margin: 0;
-  text-align: center;
-  font-weight: bold;  /* Ajoute un peu de poids au texte pour le mettre en valeur */
-}
 
 /* Barre de recherche et filtres */
 .filters {

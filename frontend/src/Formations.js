@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Formations.css'; // Import du fichier CSS pour les styles
+import Header from './Header';
 
 const Formations = () => {
   const [formations, setFormations] = useState([]);  
@@ -47,11 +48,7 @@ const Formations = () => {
 
   return (
     <div className="container">
-      {/* Header avec texte aligné à droite */}
-      <header className="header">
-        <h1>Hub de Formations</h1>
-      </header>
-
+      <Header/>
       {/* Barre de recherche avec filtre par catégorie, fournisseur et titre */}
       <div className="filters">
         <input

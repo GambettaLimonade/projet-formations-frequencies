@@ -1,9 +1,11 @@
+/* index.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 /* Button.css */
 .button-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70vh; /* Assure que le conteneur prend toute la hauteur de la page */
+    height: 30vh; /* Assure que le conteneur prend toute la hauteur de la page */
     z-index: 1;
   }
   
@@ -15,6 +17,7 @@
     padding: 20px 40px; /* Augmenter l'espacement interne pour un bouton plus grand */
     font-size: 24px; /* Augmenter la taille de la police */
     cursor: pointer; /* Curseur pointeur */
+    font-family: 'Poppins', cursive; /* Notez l'ajout de 'cursive' comme fallback */
     transition: background-color 0.3s ease, border 0.3s ease; /* Transition douce pour le changement de couleur et de bordure */
   }
   

@@ -1,5 +1,8 @@
+/* index.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 .App {
   text-align: center;
+  font-family: 'Poppins', cursive; /* Notez l'ajout de 'cursive' comme fallback */
 }
 
 .App-logo {
@@ -22,10 +25,6 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
