@@ -1,97 +1,98 @@
 import React, { useState, useEffect } from 'react';
-import './Formations.css'; // Import du fichier CSS pour les styles
+import './Formations.css';
 import Header from './Header';
+import Carousel from './Carousel';
+import Footer from './Footer';
+import CategoryBubbles from './CategoryBubbles';
 
 const Formations = () => {
-  const [formations, setFormations] = useState([]);  
-  const [filteredFormations, setFilteredFormations] = useState([]);  
-  const [category, setCategory] = useState("");  
-  const [search, setSearch] = useState("");  
-  const [fournisseur, setFournisseur] = useState("");  // Nouveau filtre fournisseur
+  const [formations, setFormations] = useState([]);
+  const [randomFormations, setRandomFormations] = useState([]);
+  const [search, setSearch] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:3001/formations')  
+    fetch('http://localhost:3001/formations-with-supplier')
       .then((response) => response.json())
       .then((data) => {
+        console.log(data); // Vérifiez ici que chaque formation a un site_web
         setFormations(data);
-        setFilteredFormations(data);  
+        selectRandomFormations(data);
       })
       .catch((error) => console.error('Error fetching data:', error));
   }, []);
 
-  // Fonction de gestion des changements de catégorie
-  const handleCategoryChange = (event) => setCategory(event.target.value);
-  const handleSearchChange = (event) => setSearch(event.target.value);
-  const handleFournisseurChange = (event) => setFournisseur(event.target.value);  // Gestion du changement fournisseur
+  const selectRandomFormations = (data) => {
+    const shuffled = data.sort(() => 0.5 - Math.random());
+    setRandomFormations(shuffled.slice(0, 4));
+  };
 
-  // Mise à jour des formations filtrées
-  useEffect(() => {
-    let filteredData = formations;
+  const handleSearchChange = (event) => {
+    const value = event.target.value;
+    setSearch(value);
 
-    // Filtrer par catégorie
-    if (category) {
-      filteredData = filteredData.filter((formation) => formation.categorie_id === parseInt(category));
+    if (value) {
+      const filteredData = formations.filter((formation) =>
+        formation.titre.toLowerCase().includes(value.toLowerCase())
+      );
+      setRandomFormations(filteredData.slice(0, 5));
+    } else {
+      selectRandomFormations(formations);
     }
+  };
 
-    // Filtrer par fournisseur
-    if (fournisseur) {
-      filteredData = filteredData.filter((formation) => formation.fournisseur_id === parseInt(fournisseur));
-    }
-
-    // Filtrer par titre
-    if (search) {
-      filteredData = filteredData.filter((formation) => formation.titre.toLowerCase().includes(search.toLowerCase()));
-    }
-
-    setFilteredFormations(filteredData);
-  }, [category, search, fournisseur, formations]);
+  const handleCategorySelect = (categoryId) => {
+    setSelectedCategory(categoryId);
+    const filteredData = formations.filter(
+      (formation) => formation.categorie_id === categoryId
+    );
+    selectRandomFormations(filteredData);
+  };
 
   return (
     <div className="container">
-      <Header/>
-      {/* Barre de recherche avec filtre par catégorie, fournisseur et titre */}
+      <Header />
       <div className="filters">
         <input
           type="text"
-          placeholder="Rechercher par titre"
+          placeholder="Trouve ta formation"
           value={search}
           onChange={handleSearchChange}
-          className="search-bar"
+          className="search-bar-wide"
         />
-
-        {/* Sélecteur de catégorie */}
-        <select onChange={handleCategoryChange} value={category} className="filter-select">
-          <option value="">Sélectionner une catégorie</option>
-          <option value="3">Informatique</option>
-          <option value="4">Marketing</option>
-          <option value="5">Sciences</option>
-          <option value="6">Business</option>
-          <option value="7">Langues</option>
-          <option value="8">Associatif</option>
-        </select>
-
-        {/* Sélecteur de fournisseur */}
-        <select onChange={handleFournisseurChange} value={fournisseur} className="filter-select">
-          <option value="">Sélectionner un fournisseur</option>
-          <option value="11">Coursera</option> {/* Seulement Coursera pour le moment */}
-          <option value="12">Le mouvement associatif</option> {/* Seulement Coursera pour le moment */}
-        </select>
-      </div>
-
-      {/* Liste des formations filtrées */}
-      <ul className="formation-list">
-        {filteredFormations.length > 0 ? (
-          filteredFormations.map((formation) => (
-            <li key={formation.id} className="formation-item">
-              <a href={formation.lien} target="_blank" rel="noopener noreferrer" className="formation-link">
-                {formation.titre}
-              </a>
-            </li>
-          ))
-        ) : (
-          <li>Aucune formation trouvée.</li>
+        {search && (
+          <ul className="dropdown-menu">
+            {randomFormations.length > 0 ? (
+              randomFormations.map((formation) => (
+                <li key={formation.id} className="dropdown-item">
+                  <a href={formation.lien} target="_blank" rel="noopener noreferrer" className="formation-link">
+                    {formation.titre}
+                  </a>
+                </li>
+              ))
+            ) : (
+              <li className="dropdown-item">Aucune formation trouvée.</li>
+            )}
+          </ul>
         )}
-      </ul>
+      </div>
+      <Carousel />
+
+      <CategoryBubbles onSelectCategory={handleCategorySelect} />
+
+      <div className="formations-list">
+        {randomFormations.map((formation) => (
+          <div key={formation.id} className="formation-card">
+            <h3>{formation.titre}</h3>
+            {formation.site_web && (
+              <a href={formation.site_web} target="_blank" rel="noopener noreferrer">
+                {formation.site_web}
+              </a>
+            )}
+          </div>
+        ))}
+      </div>
+      <Footer />
     </div>
   );
 };

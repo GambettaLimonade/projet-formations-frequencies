@@ -44,6 +44,61 @@ app.get('/formations', (req, res) => {
   });
 });
 
+// Route pour récupérer toutes les catégories
+app.get('/categories', (req, res) => {
+  client.query('SELECT * FROM categorie', (err, result) => {
+    if (err) {
+      res.status(500).send('Erreur lors de la récupération des catégories');
+    } else {
+      res.json(result.rows);
+    }
+  });
+});
+
+
+// Route pour récupérer les formations avec le site web du fournisseur
+app.get('/formations-with-supplier', (req, res) => {
+  const query = `
+    SELECT f.id, f.titre, f.categorie_id, f.fournisseur_id, fr.site_web
+    FROM formation f
+    JOIN fournisseur fr ON f.fournisseur_id = fr.id;
+  `;
+
+  client.query(query, (err, result) => {
+    if (err) {
+      res.status(500).send('Erreur lors de la récupération des formations avec fournisseur');
+    } else {
+      res.json(result.rows);
+    }
+  });
+});
+
+
+
+app.get('/search', (req, res) => {
+  const searchTerm = req.query.q; // Récupère le terme de recherche depuis les paramètres de requête
+
+  if (!searchTerm) {
+    return res.status(400).send('Le terme de recherche est requis');
+  }
+
+  const query = `
+    SELECT * FROM formation
+    WHERE titre ILIKE $1
+  `;
+  const values = [`%${searchTerm}%`];
+
+  client.query(query, values, (err, result) => {
+    if (err) {
+      res.status(500).send('Erreur lors de la recherche des formations');
+    } else {
+      res.json(result.rows);
+    }
+  });
+});
+
+
+
 // Démarrage du serveur
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);

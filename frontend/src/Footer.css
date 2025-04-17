@@ -1,4 +1,9 @@
-/* Footer.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Assurez-vous que la hauteur est définie */
+  justify-content: space-between; /* Pousse le footer vers le bas */
+}
 
 .footer {
   background-color: rgb(171, 189, 234);
@@ -8,17 +13,17 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  z-index: 1;
+  position: relative;
 }
 
 .footer-left, .footer-right {
-  flex: 1; /* Utilise l'espace disponible */
-  min-width: 200px; /* Largeur minimale pour les petits écrans */
+  flex: 1;
+  min-width: 200px;
   margin: 10px;
 }
 
 .footer-center {
-  flex: 0 0 100px; /* Taille fixe pour le logo */
+  flex: 0 0 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,7 +36,6 @@
   margin-top: 20px;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .footer {
     flex-direction: column;
